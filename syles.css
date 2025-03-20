@@ -1,0 +1,40 @@
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: grid;
+  place-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+svg text {
+  stroke-width: 1;
+  font-size: 5rem;
+  letter-spacing: -6px;
+}
+svg text.text-body {
+  stroke: orangered;
+  fill: transparent;
+  animation: 4s ease-in-out infinite alternate animate;
+}
+@keyframes animate {
+  0% {
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 32%;
+  }
+  50% {
+    fill: transparent;
+    stroke-width: 2;
+  }
+  80%,
+  100% {
+    fill: orangered;
+    stroke: transparent;
+    stroke-width: 0;
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 32% 0;
+  }
+}
